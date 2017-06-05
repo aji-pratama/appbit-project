@@ -4,5 +4,6 @@ from app.account import views as account_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^', account_views.index, name='index'),
+    url(r'^/', account_views.index, name='index'),
+    url(r'^blog/', include('app.blog.urls', namespace='blog', app_name='blog')),
 ]
